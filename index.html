@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="init()">
+
+    <header>
+        <h1>Welcome to our canvas</h1>
+
+    </header>
+    <div class="container">
+        <div class="user-prefs">
+            <button onclick="toggleRandomColor(this)" class="random-color-btn">Random Color</button> 
+            <input onchange="onSetColor(value)" type="color">
+            <select onchange="onSetShape(value)" name="shapes">
+                    <option value="line">Line</option>
+                    <option value="square">Square</option>
+                    <option value="circle">Circle</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="random">Random</option>
+                </select>
+                <input oninput="onSetWidth(value)"type="range"  value="1"  min="1" max="20">
+                <span class="range-value">1</span>
+            </div>
+            <canvas onmousemove="onMouseMove(event)" onmousedown='onMouseDownUp()' onmouseup='onMouseDownUp()' id="our-canvas"
+            width="700" height="500"></canvas>
+        </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
